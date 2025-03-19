@@ -1,0 +1,159 @@
+/* Estilização geral */
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.titulo {
+  text-align: center;
+  color: #333;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estilos da lista de posts */
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.post {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+}
+
+.post-titulo {
+  font-size: 1.8em;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.post-conteudo {
+  color: #555;
+  flex-grow: 1;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.post-categoria, .post-autor, .post-data {
+  font-size: 0.9em;
+  color: #777;
+  font-weight: 600;
+  text-align: center;
+}
+
+.divisoria {
+  margin-top: 10px;
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #0073a8, #28a745);
+}
+
+/* Botões */
+.botao-editar, .botao-excluir, .botao-salvar, .botao-cancelar {
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 6px;
+  transition: all 0.3s;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.botao-editar {
+  background: #0073a8;
+  color: white;
+}
+
+.botao-editar:hover {
+  background: #005f87;
+}
+
+.botao-excluir {
+  background: #d9534f;
+  color: white;
+}
+
+.botao-excluir:hover {
+  background: #c9302c;
+}
+
+.botao-salvar {
+  background: #28a745;
+  color: white;
+}
+
+.botao-salvar:hover {
+  background: #218838;
+}
+
+.botao-cancelar {
+  background: #6c757d;
+  color: white;
+}
+
+.botao-cancelar:hover {
+  background: #5a6268;
+}
+
+/* Formulário de edição */
+.editor-container {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #0000001a;
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.input-titulo, .input-conteudo, .input-categoria, .input-autor {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+textarea.input-conteudo {
+  height: 120px;
+  resize: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .post {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .post {
+    width: 100%;
+  }
+}
